@@ -23,9 +23,9 @@ function HomePage() {
       <h1 className="">All Phones</h1>
 
       {phones ? (
-        <div className="">
-          {phones.map((phone, i) => {
-            return <PhoneCard {...phone} />;
+        <div>
+          {phones.map((phone) => {
+            return <PhoneCard key={phone.id} {...phone} />;
           })}
         </div>
       ) : (
